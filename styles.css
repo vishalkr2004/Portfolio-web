@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #1a237e; /* A deep, professional blue */
+    --secondary-color: #f4f7fa; /* Light grey background */
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --header-bg: #ffffff;
+    --header-text: #333;
+    --link-color: #1a237e;
+    --badge-bg: #e3eafc;
+    --badge-text: #1a237e;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--header-text);
+}
+
+.header-text p {
+    margin: 5px 0 10px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.links a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.card .date {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.badge {
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
