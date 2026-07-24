@@ -61,6 +61,15 @@ a{color:inherit}
 .status .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--redline);flex:none}
 .status .v{font-size:.95rem;color:var(--graphite)}
 .status .v b{color:var(--ink);font-weight:600}
+.hero-grid{display:grid;grid-template-columns:1fr minmax(200px,280px);gap:clamp(28px,5vw,60px);align-items:start}
+.portrait{border:1px solid var(--hairline);background:var(--card);padding:9px;margin-top:6px}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:0}
+  .hero-main{grid-row:2}
+  .portrait{grid-row:1;width:120px;margin:0 0 28px}
+  .portrait img{aspect-ratio:1/1}
+}
 
 .sheet{padding:var(--rhythm) 0;border-bottom:1px solid var(--hairline)}
 .sheet-head{display:flex;align-items:baseline;gap:16px;margin-bottom:38px;flex-wrap:wrap}
@@ -187,7 +196,8 @@ a{color:inherit}
 </nav>
 
 <header class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div class="hero-main">
     <div class="eyebrow"><i></i><span>Indian Institute of Technology Madras</span></div>
 
     <h1 class="name">Vishal<br>KR</h1>
@@ -206,7 +216,7 @@ a{color:inherit}
 
     <div class="links">
       <a class="primary" href="Vishal_KR_Resume.pdf" download>Download résumé</a>
-      <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/vishal-k-r-302622245/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/vishalkr2004" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:you@example.com">Email</a>
     </div>
@@ -215,6 +225,11 @@ a{color:inherit}
       <span class="k">Status</span>
       <span class="v">Graduating <b>2027</b> · Open to AI/ML and design engineering roles</span>
     </div>
+   </div>
+
+    <figure class="portrait">
+      <img src="Vishal%20photo.jpg" alt="Portrait of Vishal KR">
+    </figure>
   </div>
 </header>
 
@@ -802,7 +817,7 @@ a{color:inherit}
       </div>
       <div class="block-cell">
         <span class="block-k">Elsewhere</span>
-        <p class="block-v"><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a></p>
+        <p class="block-v"><a href="https://www.linkedin.com/in/vishal-k-r-302622245/" target="_blank" rel="noopener">LinkedIn</a></p>
         <p class="block-v"><a href="https://github.com/vishalkr2004" target="_blank" rel="noopener">GitHub</a></p>
       </div>
       <div class="block-cell">
